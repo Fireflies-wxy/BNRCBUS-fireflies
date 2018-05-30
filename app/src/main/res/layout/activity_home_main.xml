@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <com.bnrc.bnrcsdk.ui.tabhost.RTabHost
+        android:id="@+id/tab_host"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/home_layout_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="2dp">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/home_image_view"
+                android:text="{icon-home}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:textColor="@drawable/page_tab_text" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/home_tv_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/home_image_view_text"
+                android:textSize="12sp"
+                android:textColor="@drawable/page_tab_text" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/route_layout_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="2dp">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/route_image_view"
+                android:text="{icon-route}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:textColor="@drawable/page_tab_text"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/route_tv_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/route_image_view_text"
+                android:textSize="12sp"
+                android:textColor="@drawable/page_tab_text" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ar_layout_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:paddingBottom="1dp"
+            android:layout_gravity="bottom">
+
+            <com.bnrc.bnrcsdk.ui.circleimage.CircleImageView
+                android:id="@+id/ar_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_above="@+id/ar_tv_view"
+                android:src="@drawable/icon_ar"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/white"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/ar_tv_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/ar_image_view_text"
+                android:textSize="12sp"
+                android:textColor="@drawable/page_tab_text" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buscircle_layout_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="2dp"
+            >
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/buscircle_image_view"
+                android:text="{icon-buscircle}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:textColor="@drawable/page_tab_text"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/buscircle_tv_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/buscircle_image_view_text"
+                android:textSize="12sp"
+                android:textColor="@drawable/page_tab_text" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/message_layout_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="3dp">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/message_image_view"
+                android:text="{icon-message}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:textColor="@drawable/page_tab_text"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/message_tv_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/message_image_view_text"
+                android:textSize="12sp"
+                android:textColor="@drawable/page_tab_text" />
+
+        </RelativeLayout>
+
+
+
+    </com.bnrc.bnrcsdk.ui.tabhost.RTabHost>
+</RelativeLayout>
