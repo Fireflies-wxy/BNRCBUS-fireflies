@@ -13,13 +13,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bnrc.bnrcbus.R;
+import com.bnrc.bnrcbus.activity.ar.ArActivity;
 import com.bnrc.bnrcbus.activity.base.BaseActivity;
 import com.bnrc.bnrcbus.view.fragment.BaseFragment;
-import com.bnrc.bnrcbus.view.fragment.home.ArFragment;
-import com.bnrc.bnrcbus.view.fragment.home.BusCircleFragment;
+import com.bnrc.bnrcbus.view.fragment.buscircle.BusCircleFragment;
 import com.bnrc.bnrcbus.view.fragment.home.HomeFragment;
-import com.bnrc.bnrcbus.view.fragment.home.MessageFragment;
-import com.bnrc.bnrcbus.view.fragment.home.RouteFragment;
+import com.bnrc.bnrcbus.view.fragment.message.MessageFragment;
+import com.bnrc.bnrcbus.view.fragment.route.RouteFragment;
 import com.bnrc.bnrcsdk.ui.tabhost.RTabHost;
 import com.joanzapata.iconify.widget.IconTextView;
 import com.bnrc.bnrcsdk.ui.circleimage.CircleImageView;
@@ -63,6 +63,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
     private DrawerLayout mDrawerLayout;
     private IconTextView icon_menu;
+
+    private CircleImageView user_icon;
 
 
     @Override
@@ -109,6 +111,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
         icon_menu = findViewById(R.id.menu_view);
+
+        user_icon = findViewById(R.id.icon_user);
+        user_icon.setOnClickListener(this);
     }
 
     private void initFragments(){
@@ -198,6 +203,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
                 Intent subwayIntent = new Intent(HomeActivity.this,
                         ArActivity.class);
                 startActivity(subwayIntent);
+                break;
+            case R.id.icon_user:
+                Intent loginIntent = new Intent(HomeActivity.this,
+                        LoginActivity.class);
+                startActivity(loginIntent);
                 break;
 
         }

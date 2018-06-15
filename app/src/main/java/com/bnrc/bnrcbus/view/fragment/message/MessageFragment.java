@@ -1,4 +1,4 @@
-package com.bnrc.bnrcbus.view.fragment.home;
+package com.bnrc.bnrcbus.view.fragment.message;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,7 +15,7 @@ import com.bnrc.bnrcbus.view.fragment.BaseFragment;
  * Created by apple on 2018/5/24.
  */
 
-public class RouteFragment extends BaseFragment {
+public class MessageFragment extends BaseFragment {
 
     private View mContentView;
     private TextView mTextView;
@@ -24,13 +24,13 @@ public class RouteFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mContext = getActivity();
-        mContentView = inflater.inflate(R.layout.fragment_route,container,false);
+        mContentView = inflater.inflate(R.layout.fragment_message,container,false);
         initView();
         return mContentView;
     }
 
     public void initView(){
-        mTextView = mContentView.findViewById(R.id.tv_route);
-        mTextView.setText("route");
+        mTextView = mContentView.findViewById(R.id.tv_message);
+        mTextView.setText("message");
     }
 }

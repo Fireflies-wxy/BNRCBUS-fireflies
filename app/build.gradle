@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -29,11 +30,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':bnrcsdk')
 
-    //字体图标
-    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
-    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
-
     //systemBarUtil
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+
+    //网络请求框架
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
 }

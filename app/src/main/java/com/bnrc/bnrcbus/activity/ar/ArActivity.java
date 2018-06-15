@@ -1,8 +1,7 @@
-package com.bnrc.bnrcbus.activity;
+package com.bnrc.bnrcbus.activity.ar;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
