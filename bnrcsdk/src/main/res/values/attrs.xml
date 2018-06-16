@@ -6,10 +6,4 @@
         <attr name="civ_border_overlay" format="boolean" />
         <attr name="civ_fill_color" format="color" />
     </declare-styleable>
-
-    <declare-styleable name="RotateLoading">
-        <attr name="loadingWidth" format="dimension" />
-        <attr name="loadingColor" format="color" />
-        <attr name="shadowPosition" format="integer" />
-    </declare-styleable>
 </resources>

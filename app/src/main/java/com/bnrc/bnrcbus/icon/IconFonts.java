@@ -1,4 +1,4 @@
-package com.bnrc.bnrcsdk.ui.icon;
+package com.bnrc.bnrcbus.icon;
 
 import com.joanzapata.iconify.Icon;
 
@@ -20,12 +20,7 @@ public enum IconFonts implements Icon {
     icon_about('\ue619'),
     icon_feedback('\ue660'),
     icon_share('\ue609'),
-    icon_modify('\ue612'),
-    icon_map('\ue613'),
-    icon_qq('\ue667'),
-    icon_wechat('\ue63a'),
-    icon_sina('\ue6ad'),
-    icon_back('\ue654');
+    icon_modify('\ue612');
 
 
     private char character;

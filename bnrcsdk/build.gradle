@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 26
@@ -32,11 +31,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-    //网络请求框架
-    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-
-    //字体图标
-    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
-    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
 }

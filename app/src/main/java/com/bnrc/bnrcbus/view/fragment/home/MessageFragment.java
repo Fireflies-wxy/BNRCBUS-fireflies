@@ -1,4 +1,4 @@
-package com.bnrc.bnrcbus.view.fragment.buscircle;
+package com.bnrc.bnrcbus.view.fragment.home;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,7 +15,7 @@ import com.bnrc.bnrcbus.view.fragment.BaseFragment;
  * Created by apple on 2018/5/24.
  */
 
-public class BusCircleFragment extends BaseFragment {
+public class MessageFragment extends BaseFragment {
 
     private View mContentView;
     private TextView mTextView;
@@ -24,14 +24,13 @@ public class BusCircleFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mContext = getActivity();
-        mContentView = inflater.inflate(R.layout.fragment_buscircle,container,false);
+        mContentView = inflater.inflate(R.layout.fragment_message,container,false);
         initView();
         return mContentView;
     }
 
     public void initView(){
-        mTextView = mContentView.findViewById(R.id.tv_buscircle);
-        mTextView.setText("BusCircle");
+        mTextView = mContentView.findViewById(R.id.tv_message);
+        mTextView.setText("message");
     }
 }
-

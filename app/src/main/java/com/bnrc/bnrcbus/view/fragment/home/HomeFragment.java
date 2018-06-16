@@ -1,14 +1,17 @@
 package com.bnrc.bnrcbus.view.fragment.home;
 
-
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+<<<<<<< HEAD
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+=======
+>>>>>>> parent of a19c384... Before expandablelistview
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,14 +19,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bnrc.bnrcbus.R;
-import com.bnrc.bnrcbus.module.version.VersionModel;
-import com.bnrc.bnrcbus.network.RequestCenter;
 import com.bnrc.bnrcbus.view.fragment.BaseFragment;
+<<<<<<< HEAD
 import com.bnrc.bnrcsdk.okhttp.listener.DisposeDataListener;
 import com.bnrc.bnrcsdk.ui.viewpager.VpAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+=======
+>>>>>>> parent of a19c384... Before expandablelistview
 
 /**
  * Created by apple on 2018/5/23.
@@ -31,6 +35,7 @@ import java.util.List;
 
 public class HomeFragment extends BaseFragment {
 
+<<<<<<< HEAD
     private static final String TAG = "HomeFragment";
 
     private View mContentView;
@@ -48,6 +53,10 @@ public class HomeFragment extends BaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+=======
+    private View mContentView;
+    private TextView mTextView;
+>>>>>>> parent of a19c384... Before expandablelistview
 
     @Nullable
     @Override
@@ -73,6 +82,7 @@ public class HomeFragment extends BaseFragment {
     }
 
     public void initView(){
+<<<<<<< HEAD
         mTabLayout = mContentView.findViewById(R.id.mTabLayout);
         mViewPager = mContentView.findViewById(R.id.mViewPager);
         //预加载
@@ -119,4 +129,9 @@ public class HomeFragment extends BaseFragment {
         mTabLayout.setupWithViewPager(mViewPager);
     }
 
+=======
+        mTextView = mContentView.findViewById(R.id.tv_home);
+        mTextView.setText("首页");
+    }
+>>>>>>> parent of a19c384... Before expandablelistview
 }

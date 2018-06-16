@@ -1,4 +1,4 @@
-package com.bnrc.bnrcsdk.ui.icon;
+package com.bnrc.bnrcbus.icon;
 
 import com.joanzapata.iconify.Icon;
 import com.joanzapata.iconify.IconFontDescriptor;
