@@ -3,9 +3,9 @@ package com.bnrc.bnrcbus.activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v4.view.GravityCompat;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
@@ -77,12 +77,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         initFragments();
         initTabHost();
 
-        //添加默认要显示的fragment
-//        mHomeFragment = new HomeFragment();
-//        fm = getFragmentManager();
-//        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-//        fragmentTransaction.replace(R.id.content_layout,mHomeFragment);
-//        fragmentTransaction.commit();
     }
 
     private void initView(){
@@ -124,9 +118,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         classList.add(BusCircleFragment.class);
         classList.add(MessageFragment.class);
 
-        fm = getFragmentManager();
+        fm = getSupportFragmentManager();
         FragmentTransaction transcation = fm.beginTransaction();
-
         fragClass = classList.get(mLastIndex);
         mFragment = createFragmentByClass(fragClass);
         transcation.replace(R.id.content_layout, mFragment).commit();
@@ -176,7 +169,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
     private void selectFragment(int index) {
 
-        FragmentTransaction transcation = getFragmentManager().beginTransaction();
+        FragmentTransaction transcation = getSupportFragmentManager().beginTransaction();
         fragClass = classList.get(index);
         mFragment = createFragmentByClass(fragClass);
         transcation.replace(R.id.content_layout, mFragment).commit();

@@ -37,194 +37,53 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/scroll_view"
+    <!-- 搜索栏 -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/search_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_home_edittext"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="{icon-search} 请输入搜索的线路或站点名称"
+            android:textColor="@color/color_b4b4b4"
+            android:textSize="14sp"
+            />
 
-            <!-- 搜索栏 -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white">
+    </RelativeLayout>
 
-                <com.joanzapata.iconify.widget.IconTextView
-                    android:id="@+id/search_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/bg_home_edittext"
-                    android:gravity="center"
-                    android:padding="6dp"
-                    android:text="{icon-search} 请输入搜索的线路或站点名称"
-                    android:textColor="@color/color_b4b4b4"
-                    android:textSize="14sp"
-                    />
+    <!-- viewpager -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-            </RelativeLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/mTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@android:color/white"
+            />
 
-            <!-- 搜索栏下面的导航栏-4个icon -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@android:color/white"
-                    android:orientation="horizontal"
-                    >
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="bottom">
-
-                        <com.joanzapata.iconify.widget.IconTextView
-                            android:text="{icon-map}"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:textSize="20sp"
-                            android:textColor="@color/colorPrimary"
-                            />
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
-                            android:text="地图"
-                            android:textSize="12sp"
-                            android:textColor="@color/color_666666" />
-
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="bottom">
-
-                        <com.joanzapata.iconify.widget.IconTextView
-                            android:text="{icon-railway}"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:textSize="20sp"
-                            android:textColor="@color/color_fed952"
-                            />
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
-                            android:text="地铁"
-                            android:textSize="12sp"
-                            android:textColor="@color/color_666666" />
-
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="bottom">
-
-                        <com.joanzapata.iconify.widget.IconTextView
-                            android:text="{icon-route}"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:textSize="20sp"
-                            android:textColor="@color/color_5a79b7"
-                            />
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
-                            android:text="线路查询"
-                            android:textSize="12sp"
-                            android:textColor="@color/color_666666" />
-
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="bottom">
-
-                        <com.joanzapata.iconify.widget.IconTextView
-                            android:text="{icon-service}"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:textSize="20sp"
-                            android:textColor="@color/green"
-                            />
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_alignParentBottom="true"
-                            android:text="其他服务"
-                            android:textSize="12sp"
-                            android:textColor="@color/color_666666" />
-
-
-
-                    </RelativeLayout>
-
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <!-- viewPager -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/color_eeeeee">
-
-                <com.bnrc.bnrcsdk.ui.viewpager.ViewpagerIndicator
-                    android:id="@+id/indicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <com.bnrc.bnrcsdk.ui.viewpager.NoScrollViewPager
-                    android:id="@+id/viewpager"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </android.support.v4.widget.NestedScrollView>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 
 </LinearLayout>

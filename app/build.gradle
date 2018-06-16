@@ -36,4 +36,7 @@ dependencies {
     //网络请求框架
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
+    //RecyclerView
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
 }
